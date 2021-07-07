@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Lesson_1</string>
+    <string name="welcome_message">работу выполнил Ковалев И.С.</string>
+    <string name="edit_text">введите свое имя</string>
+    <string name="button_text">click me</string>
+    <string name="edit_text_second_activity">введите текст</string>
+    <string name="edit_name">введите имя</string>
+    <string name="edit_number">введите номер</string>
+    <string name="edit_password">введите пароль</string>
+    <string name="edit_email">введите email</string>
+    <string name="edit_phone_number">введите телефон</string>
+
 </resources>
