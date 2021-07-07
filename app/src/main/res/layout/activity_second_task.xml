@@ -46,5 +46,9 @@
         android:inputType="textEmailAddress"
         android:hint="@string/edit_email"/>
 
+    <CalendarView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>
