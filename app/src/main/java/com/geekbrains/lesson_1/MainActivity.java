@@ -6,6 +6,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText calculation;
     private EditText result;
     private String curr, res;
+    public static final String PARAM_CURR = "PARAM_CURR";
+    public static final String PARAM_RES = "PARAM_RES";
+
     private Button button_clear, button_del, button_div, button_mul, button_sub, button_point,
             button_result, button_add, button_0, button_1, button_2, button_3, button_4,
             button_5, button_6, button_7, button_8, button_9;
@@ -50,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         button_result = (Button) findViewById(R.id.button_result);
         button_add = (Button) findViewById(R.id.button_add);
         button_div = (Button) findViewById(R.id.button_div);
+
 
 
         button_0.setOnClickListener(new OnClickListener() {
@@ -281,6 +286,22 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(PARAM_CURR, curr);
+        outState.putString(PARAM_RES, res);
+        displayOne();
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        curr = savedInstanceState.getString(PARAM_CURR, " ");
+        res = savedInstanceState.getString(PARAM_RES, " ");
+        displayTwo();
     }
 
     public void displayOne(){
