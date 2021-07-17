@@ -18,10 +18,13 @@ public class MainActivity extends AppCompatActivity {
     public static final String PARAM_RES = "PARAM_RES";
 
     private Button button_clear, button_del, button_div, button_mul, button_sub, button_point,
-            button_result, button_add, button_0, button_1, button_2, button_3, button_4,
-            button_5, button_6, button_7, button_8, button_9;
+            button_result, button_add;
+
+    private final int[] numberButtonIds = new int[]{R.id.button_0, R.id.button_1, R.id.button_2, R.id.button_3,
+            R.id.button_4, R.id.button_5, R.id.button_6, R.id.button_7, R.id.button_8, R.id.button_9};
 
     public boolean dot_inserted, operator_inserted;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,16 +39,6 @@ public class MainActivity extends AppCompatActivity {
         dot_inserted = false;
         operator_inserted = false;
 
-        button_0 = (Button) findViewById(R.id.button_0);
-        button_1 = (Button) findViewById(R.id.button_1);
-        button_2 = (Button) findViewById(R.id.button_2);
-        button_3 = (Button) findViewById(R.id.button_3);
-        button_4 = (Button) findViewById(R.id.button_4);
-        button_5 = (Button) findViewById(R.id.button_5);
-        button_6 = (Button) findViewById(R.id.button_6);
-        button_7 = (Button) findViewById(R.id.button_7);
-        button_8 = (Button) findViewById(R.id.button_8);
-        button_9 = (Button) findViewById(R.id.button_9);
         button_clear = (Button) findViewById(R.id.button_clear);
         button_del = (Button) findViewById(R.id.button_del);
         button_mul = (Button) findViewById(R.id.button_mul);
@@ -55,87 +48,8 @@ public class MainActivity extends AppCompatActivity {
         button_add = (Button) findViewById(R.id.button_add);
         button_div = (Button) findViewById(R.id.button_div);
 
+        setNumberButtonListeners();
 
-
-        button_0.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                curr = curr + "0";
-                displayOne();
-            }
-        });
-
-        button_1.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                curr = curr + "1";
-                displayOne();
-            }
-        });
-
-        button_2.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                curr = curr + "2";
-                displayOne();
-            }
-        });
-
-        button_3.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                curr = curr + "3";
-                displayOne();
-            }
-        });
-
-        button_4.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                curr = curr + "4";
-                displayOne();
-            }
-        });
-
-        button_5.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                curr = curr + "5";
-                displayOne();
-            }
-        });
-
-        button_6.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                curr = curr + "6";
-                displayOne();
-            }
-        });
-
-        button_7.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                curr = curr + "7";
-                displayOne();
-            }
-        });
-
-        button_8.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                curr = curr + "8";
-                displayOne();
-            }
-        });
-
-        button_9.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                curr = curr + "9";
-                displayOne();
-            }
-        });
 
         button_point.setOnClickListener(new OnClickListener() {
             @Override
@@ -335,6 +249,17 @@ public class MainActivity extends AppCompatActivity {
                 curr = curr.substring(0, curr.length() - 1);
             }
 
+        }
+
+    }
+
+    private void setNumberButtonListeners() {
+        for (int i = 0; i < numberButtonIds.length; i++) {
+            findViewById(numberButtonIds[i]).setOnClickListener(v -> {
+                Button btn = (Button)v;
+                curr = curr + btn.getText().toString();
+                displayOne();
+            });
         }
 
     }
