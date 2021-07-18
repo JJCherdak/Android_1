@@ -7,4 +7,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="editText_text_color">"#FFBF00"</color>
+    <color name="button_color_backgroundTint">"#CCCCFF"</color>
+    <color name="button_res_color_backgroundTint">"#9370DB"</color>
+    <color name="button_numbers_color_backgroundTint">"#DFFF00"</color>
+    <color name="button_text_color">"#FF000000"</color>
+    <color name="funnyStalePrimary">FFFFEB3B</color>
+
+
+
+
+
+
+
 </resources>
