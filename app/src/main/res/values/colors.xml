@@ -13,6 +13,7 @@
     <color name="button_res_color_backgroundTint">"#9370DB"</color>
     <color name="button_numbers_color_backgroundTint">"#DFFF00"</color>
     <color name="button_text_color">"#FF000000"</color>
+    <color name="funnyStalePrimary">FFFFEB3B</color>
 
 
 

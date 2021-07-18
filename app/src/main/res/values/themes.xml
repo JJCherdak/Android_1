@@ -13,4 +13,16 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="FunnyStale">
+        <item name="colorOnPrimary">@color/funnyStalePrimary</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">100dp</item>
+
+
+
+    </style>
+
+
+
 </resources>
