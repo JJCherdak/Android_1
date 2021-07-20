@@ -18,6 +18,11 @@
     <string name="button_clear">C</string>
     <string name="button_del">backspase</string>
     <string name="button_res">=</string>
+    <string name="button_setting">setting</string>
+    <string name="dark_theme">dark</string>
+    <string name="funny_theme">funny</string>
+
+
 
 
 </resources>

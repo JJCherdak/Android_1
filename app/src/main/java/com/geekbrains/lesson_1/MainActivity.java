@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String PARAM_RES = "PARAM_RES";
 
     private Button button_clear, button_del, button_div, button_mul, button_sub, button_point,
-            button_result, button_add;
+            button_result, button_add, button_setting;
 
     private final int[] numberButtonIds = new int[]{R.id.button_0, R.id.button_1, R.id.button_2, R.id.button_3,
             R.id.button_4, R.id.button_5, R.id.button_6, R.id.button_7, R.id.button_8, R.id.button_9};
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         button_result = (Button) findViewById(R.id.button_result);
         button_add = (Button) findViewById(R.id.button_add);
         button_div = (Button) findViewById(R.id.button_div);
+        button_setting = (Button) findViewById(R.id.button_setting);
 
         setNumberButtonListeners();
 
