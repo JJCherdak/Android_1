@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="editText_height">150dp</dimen>
+    <dimen name="editText_marginTop">5dp</dimen>
+    <dimen name="editText_textSize">56sp</dimen>
+
+    <dimen name="button_marginStart">8dp</dimen>
+    <dimen name="button_marginEnd">5dp</dimen>
+    <dimen name="button_heightOrWidth">0dp</dimen>
+    <dimen name="button_textSize_clear">50sp</dimen>
+    <dimen name="button_textSize_del">25sp</dimen>
+    <dimen name="button_textSize_numbers">40sp</dimen>
+    <dimen name="button_setting_textSize">20sp</dimen>
+
+
+</resources>
