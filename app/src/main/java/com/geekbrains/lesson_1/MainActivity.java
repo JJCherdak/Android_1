@@ -1,5 +1,6 @@
 package com.geekbrains.lesson_1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,6 +18,13 @@ public class MainActivity extends AppCompatActivity {
     public static final String PARAM_CURR = "PARAM_CURR";
     public static final String PARAM_RES = "PARAM_RES";
 
+    public static final String SETTINGS = "SETTINGS";
+    public static final String APP_THEME = "APP_THEME";
+    public static final int AppFunnyTheme = 1;
+    public static final int AppDarkTheme = 2;
+    public static final int Theme_Lesson_1 = 0;
+
+
     private Button button_clear, button_del, button_div, button_mul, button_sub, button_point,
             button_result, button_add, button_setting;
 
@@ -29,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(R.style.FunnyStale);
         setContentView(R.layout.activity_main);
+
 
         calculation = (EditText) findViewById(R.id.calculation);
         result = (EditText) findViewById(R.id.result);
@@ -48,9 +56,15 @@ public class MainActivity extends AppCompatActivity {
         button_result = (Button) findViewById(R.id.button_result);
         button_add = (Button) findViewById(R.id.button_add);
         button_div = (Button) findViewById(R.id.button_div);
-        button_setting = (Button) findViewById(R.id.button_setting);
+        findViewById(R.id.button_setting).setOnClickListener(v -> {
+            Intent intent = new Intent(this, SettingActivity.class);
+            startActivity(intent);
+        });
+
 
         setNumberButtonListeners();
+
+
 
 
         button_point.setOnClickListener(new OnClickListener() {
@@ -201,7 +215,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     @Override
@@ -265,5 +278,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
 
 }
